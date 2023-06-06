@@ -8,7 +8,6 @@
 * layout
 *--------------------------------------*/
 @use "./layout/header";
-@use "./layout/hgMenu";
 /*--------------------------------------*
 * object
 *--------------------------------------*/
@@ -22,15 +21,17 @@
 @use "./object/component/btn";
 @use "./object/component/inner";
 @use "./object/component/sec";
+@use "./object/component/feadAnime";
+@use "./object/component/logo";
+@use "./object/component/drop";
 
 /*-------------------
 * project
 -------------------*/
-@use "./object/project/logo";
 @use "./object/project/nav";
 @use "./object/project/topHead";
 @use "./object/project/suggest";
-@use "./object/project/drop";
+@use "./object/project/hgMenu";
 
 /*-------------------
 * utility

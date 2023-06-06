@@ -45,6 +45,11 @@
         }
       }
     }
+    &.is-active {
+      &__subMenu {
+        display: block;
+      }
+    }
   }
   &__special {
     display: none;
