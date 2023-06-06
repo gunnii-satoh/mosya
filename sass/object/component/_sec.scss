@@ -1,0 +1,8 @@
+@use "./../../foundation/variable" as *;
+
+.c-sec {
+  padding: 4em 0;
+  &--black {
+    background-color: $Black;
+  }
+}

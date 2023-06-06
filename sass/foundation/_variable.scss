@@ -1,0 +1,43 @@
+/*---------------------------- screen ---------------------------------*/
+
+@mixin tb($width-media: 768px) {
+  @media only screen and (min-width: $width-media) {
+    @content;
+  }
+}
+@mixin pcS($width-media: 1079px) {
+  @media only screen and (min-width: $width-media) {
+    @content;
+  }
+}
+@mixin pc($width-media: 1200px) {
+  @media only screen and (min-width: $width-media) {
+    @content;
+  }
+}
+
+/*----------------------------- color ----------------------------------*/
+$White: #fff;
+$Black: #000000;
+$Blue: #2498b3;
+$rightBlue: #e9f8fb;
+
+/*----------------------------- font ----------------------------------*/
+@function fontSize($minFont) {
+  $minWidth: 300;
+  $maxWidth: 800;
+  $minFontSize: $minFont * 1px;
+  $fontVw: round($minFont/$minWidth * 100 * 1000) / 1000;
+  $maxFontSize: round($maxWidth * ($fontVw / 100)) * 1px;
+  @return clamp(#{$minFontSize}, #{$fontVw}vw, #{$maxFontSize});
+}
+
+/*----------------------------- size ----------------------------------*/
+@function spaceSize($minSpace) {
+  $minWidth: 300;
+  $maxWidth: 700;
+  $minSpaceSize: $minSpace * 1px;
+  $spaceVw: round($minSpace/$minWidth * 100 * 1000) / 1000;
+  $maxSpaceSize: round($maxWidth * ($spaceVw / 100)) * 1px;
+  @return clamp(#{$minSpaceSize}, #{$spaceVw}vw, #{$maxSpaceSize});
+}

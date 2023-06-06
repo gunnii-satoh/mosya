@@ -1,0 +1,14 @@
+@use "./../../foundation/variable" as *;
+
+.c-bar {
+  &--blue {
+    span {
+      background-color: $Blue;
+    }
+  }
+  &--black {
+    span {
+      background-color: $Black;
+    }
+  }
+}

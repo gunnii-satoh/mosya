@@ -1,0 +1,54 @@
+@use "./../../foundation/variable" as *;
+
+.c-menu {
+  position: relative;
+  z-index: 9999;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+
+  span {
+    display: block;
+    transition: all 0.2s;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+    height: 2px;
+    width: 23px;
+
+    &:nth-of-type(1) {
+      top: 15px;
+    }
+    &:nth-of-type(2) {
+      top: 24px;
+    }
+    &:nth-of-type(3) {
+      top: 33px;
+    }
+  }
+
+  @include pc {
+    display: none;
+  }
+}
+
+.c-menu.is-active {
+  background-color: $Blue;
+  position: fixed !important;
+  span {
+    background-color: $White !important;
+    &:nth-of-type(1) {
+      transform: translateY(6px) rotate(-45deg);
+      top: 17px;
+    }
+    &:nth-of-type(2) {
+      opacity: 0;
+    }
+    &:nth-of-type(3) {
+      transform: translateY(-6px) rotate(-135deg);
+      top: 29px;
+    }
+  }
+}

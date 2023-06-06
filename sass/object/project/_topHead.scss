@@ -1,0 +1,93 @@
+@use "./../../foundation/variable" as *;
+
+.p-topHead {
+  position: relative;
+  background: transparent url(./../../../img/bg-hero3.png) no-repeat center
+    center;
+  background-size: cover;
+  background-position: center -25px;
+  background-attachment: fixed;
+  height: 300px;
+  padding-bottom: 320px;
+  overflow: hidden;
+  @include tb {
+    background-position: center 0;
+    height: 650px;
+    padding: 0;
+  }
+  &__layer1 {
+    align-items: flex-end;
+    justify-content: center;
+    padding-top: 80px;
+    background: transparent url(./../../../img/bg-hero1.png) no-repeat center
+      center;
+    background-position: center -30px;
+    background-size: cover;
+    z-index: 200;
+    display: flex;
+    @include tb {
+      background-position: center -75px;
+      align-items: flex-start;
+      background-size: auto;
+    }
+  }
+
+  &__layer2 {
+    background: transparent url(./../../../img/bg-hero2.png) no-repeat center
+      center;
+    background-size: cover;
+    background-position: center -25px;
+    z-index: 100;
+    @include tb {
+      background-size: auto;
+      background-position: center -75px;
+    }
+  }
+
+  &__body {
+    background-color: $White;
+    width: 100%;
+    max-width: 100%;
+    padding: 9px 0 13px;
+    text-align: center;
+    @include tb {
+      width: fit-content;
+      max-width: 530px;
+      border-radius: 10px;
+      padding: 43px 40px 19px 40px;
+    }
+    p {
+      margin: 0.5em 0;
+      font-size: 1.3rem;
+      font-weight: 700;
+      @include tb {
+        font-size: 1.6rem;
+        margin: 1.3em 0 0.5em;
+      }
+    }
+  }
+
+  &__title {
+    display: none;
+    @include tb {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    img {
+      height: auto;
+      width: 280px;
+    }
+  }
+
+  &__btn {
+    line-height: 1;
+    a {
+      padding: 12px 18px;
+      font-size: 1.6rem;
+      @include tb {
+        padding: 24px 37px;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

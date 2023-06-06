@@ -1,0 +1,10 @@
+@use "./../../foundation/variable" as *;
+
+.u-padding {
+  &--10xy {
+    padding: 10px;
+    @include pc {
+      padding: 0 15px;
+    }
+  }
+}

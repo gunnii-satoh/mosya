@@ -1,0 +1,60 @@
+@use "./../../foundation/variable" as *;
+
+.p-nav {
+  &__menu {
+    font-weight: bold;
+    position: relative;
+    @include pc {
+      white-space: nowrap;
+      a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 70px;
+      }
+    }
+  }
+  &__subMenu {
+    display: none;
+    font-weight: 400;
+    @include pc {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      z-index: 1000px;
+      background-color: $rightBlue;
+    }
+    li {
+      height: auto;
+      display: flex;
+      align-items: center;
+      @include pc {
+        display: block;
+        position: relative;
+      }
+      a {
+        padding: 10px 10px 10px 25px;
+        @include pc {
+          padding: 15px 60px 15px 15px;
+          font-weight: 400;
+          height: auto;
+          &:hover {
+            background-color: $White;
+            color: $Blue;
+          }
+        }
+      }
+    }
+  }
+  &__special {
+    display: none;
+    @include pc {
+      display: block;
+      background-color: $Blue;
+      color: $White;
+    }
+    a {
+      padding: 0 15px;
+    }
+  }
+}
