@@ -1,0 +1,26 @@
+@use "./../../foundation/variable" as *;
+
+.p-hgMenu {
+  &__list {
+    display: none;
+    background-color: $White;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+    @include pc {
+      display: block;
+      position: static;
+    }
+  }
+  &__content {
+    @include pc {
+      display: flex;
+    }
+  }
+}
+.p-hgMenu__list.is-active {
+  display: block;
+}
