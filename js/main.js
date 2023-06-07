@@ -45,25 +45,14 @@ $(window).resize(function () {
     }
     timer = setTimeout(function () {
         if (windowWidth <= point) {
+            $(".p-hgMenu__list").removeClass(".is-active").slideUp("fast");
             $(".c-menu").removeClass("is-active");
-            $(".p-hgMenu__list").addClass("is-active");
             $(".p-nav__sudMenu").slideUp("fast").removeClass("is-active");
         } else {
+            $(".p-hgMenu__list").removeClass("is-active").css("display", "block");
             $(".c-menu").removeClass("is-active");
-            $(".p-hgMenu__list").removeClass("is-active");
             $(".p-nav__subMenu").slideUp("fast").removeClass("is-active");
         }
     }, 50);
 });
 
-// $(window).on('load', function () {
-//     var w = window.innerWidth;
-//     var point = 1200;
-//     if (w <= point) {
-//         //画面サイズが1200px以下のときの処理
-//         $(".c-menu").removeClass("is-active");
-//     } else {
-//         //それ以外のときの処理
-//         $(".c-menu").removeClass("is-active");
-//     }
-// });
